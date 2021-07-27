@@ -1,0 +1,12 @@
+.Footer{
+    width: 100%;
+    height: 12%;
+    z-index: 20;
+    /* background-color: rgb(50, 122, 98); */
+}
+.Footermain{
+    width: 90%;
+    height: 100%;
+    margin-left: 5%;
+    /* background-color: rosybrown; */
+}
