@@ -48,3 +48,16 @@
 .ant-menu>li>span:hover{
     color: rgb(33, 139, 238);
 }
+/* .homePage{
+  color: #fff;
+}
+.myblog{
+  color: #fff;
+} */
+.ant-menu:hover .homePage::after{
+  color: #1707fa;
+}
+.homePage:hover {
+  color: #1707fa;
+}
+
