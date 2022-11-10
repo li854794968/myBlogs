@@ -10,12 +10,11 @@ const style = {
     height: "20%",
   },
   state: {
-    current: "",
+    current: "homePage",
   },
 };
 class Header extends Component {
   render() {
-    const path = style.state.current;
     return (
       <div className="Header" style={style.size}>
         <div className="Headermain">
@@ -28,18 +27,14 @@ class Header extends Component {
                 <Menu
                   defaultSelectedKeys={[style.state.current]}
                   onClick={handleClick}
-                  selectedKeys={[path]}
+                  selectedKeys={[style.state.current]}
                   mode="horizontal"
                   selectable="true"
                   style={{ backgroundColor: "rgba(0,0,0,0)" }}
                 >
-                  {/* <Link className="homePage" to='/'><Menu.Item  key="home">首页</Menu.Item></Link> */}
-                  {/* <Menu.Item  key="home"><Link style={{color:'#fff'}} className="homePage" to='/HomePage'>首页</Link></Menu.Item> */}
-                  <Menu.Item key="blogs"><Link  style={{color:'#fff'}} className="myblog" to='/myblog'>博客</Link></Menu.Item>
+                  <Menu.Item  key="homePage"><Link style={{color:'#fff'}} className="homePage" to='/'>首页</Link></Menu.Item>
+                  <Menu.Item key="myblog"><Link  style={{color:'#fff'}} className="myblog" to='/myblog'>博客</Link></Menu.Item>
                   <Menu.Item key="live">生活</Menu.Item>
-                  {/* <Menu.Item key="relation">联系</Menu.Item>
-                  <Menu.Item key="aboutMe">关于</Menu.Item> */}
-
                 </Menu>
               </div>
             </Col>
@@ -48,29 +43,9 @@ class Header extends Component {
       </div>
     )
     function handleClick(e) {
-      console.log(e.key);
       style.state.current = e.key;
-
-      console.log(style.state.current);
-      //    setStyle.state({ current: e.key })
-      console.log("click ");
     }
   }
 }
-
-// function Header() {
-//   function handleClick(e) {
-//     console.log(e.key);
-//     style.state.current = e.key;
-
-//     console.log(style.state.current);
-//     //    setStyle.state({ current: e.key })
-//     console.log("click ");
-//   }
-//   const path = style.state.current;
-//   return (
-
-//   );
-// }
 
 export default Header;

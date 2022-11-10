@@ -12,19 +12,16 @@ const style = {
 function homePage() {
   return (
     <div className="homepage" style={style.bgd}>
-      <div class="space">
-        <div class="stars">
-          <div class="star"></div>
-          <div class="star pink"></div>
-          <div class="star blue"></div>
-          <div class="star yellow"></div>
+      <div className="space">
+        <div className="stars">
+          <div className="star"></div>
+          <div className="star pink"></div>
+          <div className="star blue"></div>
+          <div className="star yellow"></div>
         </div>
       </div>
       <Header></Header>
       <Main></Main>
-      {/* <Header></Header>
-      <Main></Main>
-      <Footer></Footer> */}
     </div>
   );
 }

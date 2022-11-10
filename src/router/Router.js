@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { HashRouter, Route, Switch } from 'react-router-dom';
-import homePage from '../view/homePage/index'
+import React, { Component, Fragment } from 'react';
+import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
+import HomePage from '../view/homePage/index'
 import myblog from '../view/myBlog/index'
 // import Header from '../components/header/index'
 // import DefaultLayout from './layouts/DefalutLayout/DefaultLayout';
@@ -8,14 +8,16 @@ import myblog from '../view/myBlog/index'
 export default class RouterWrap extends Component {
     render() {
         return (
-            <div id="router">
+            <Fragment>
                 <HashRouter>
                     <Switch>
-                        <Route path="/" component={homePage} />
+                        <Route path="/homePage" component={HomePage} />
+                        <Route exact path="/" component={HomePage} />
                         <Route path="/myblog" component={myblog} />
+                        <Redirect to={"/homePage"} />
                     </Switch>
                 </HashRouter>
-            </div>
+            </Fragment>
         )
     }
 }
