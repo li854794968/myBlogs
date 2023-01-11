@@ -11,8 +11,8 @@ export default class RouterWrap extends Component {
             <Fragment>
                 <HashRouter>
                     <Switch>
-                        <Route path="/homePage" component={HomePage} />
                         <Route exact path="/" component={HomePage} />
+                        <Route path="/homePage" component={HomePage} />
                         <Route path="/myblog" component={myblog} />
                         <Redirect to={"/homePage"} />
                     </Switch>
